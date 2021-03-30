@@ -1,1 +1,10 @@
 # tolls
+Given a vehicle and a list of times, find the total toll fee.
+
+### Biggest obstacles along the way
+One functionality that the previous version of the code lacked was to find holidays for any year. As there are some holidays that are not bound by a specific date (like Easter), I had to figure out a way to make sure that the code would work no matter what year it was. I found the Gauss Easter Formula and thought that it was very funny! (Because OF COURSE Gauss would have a formula for that). But I was already leaning towards using an API or library for this particular functionality as it would definitely exist. I shortly thereafter found jollyday and thought it would be a great fit! In addition to providing all official holidays for many countries, they also let developers create their own holidays and add them freely into an XML. This was handy, as I was able to add toll-free days on the day before each holiday quite easily. The only struggle was adding the day before Ascension Day, as that day doesn't have an official name like many other holiday-eves. So after some digging online about jollyday, I found that they have a ```relativeToEasterSunday``` function that's able to add holidays n many days relative to easter. So after that, adding that additional toll-free day was easy.
+
+The other obstacle I encounterd was my reading comprehension. Although the comments in the code clearly state that the ```getTotalTollFee()``` method should return the total fee for ONE day, I assumed that there might be multiple days in the given list. So I solved that problem but realised that it was unneccessary and had to redo some stuff. But it was an easy fix.
+
+### Conclusion
+Honestly, the problem was quite straighforward and I didn't really get stuck on anything in particular for very long (besides the one mentioned above that required a little bit of digging). While I did find the problem itself easy to solve, I'm not sure I feel confident in the general structure of the project and I'm sure there are ways to make it better. It's definitely something I feel like I need to learn more about.
