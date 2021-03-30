@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Configuration
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.org/Holiday"
+        xmlns:tns="http://www.example.org/Holiday"
+        elementFormDefault="qualified">
+
+    <tns:Holidays>
+        <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+        <tns:Fixed month="JANUARY" day="5" descriptionPropertiesKey="DAY_BEFORE_EPIPHANY"/>
+        <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+        <tns:Fixed month="APRIL" day="30" descriptionPropertiesKey="DAY_BEFORE_LABOUR_DAY"/>
+        <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+        <tns:Fixed month="JUNE" day="5" descriptionPropertiesKey="DAY_BEFORE_NATIONAL_DAY"/>
+        <tns:Fixed month="JUNE" day="6" descriptionPropertiesKey="NATIONAL_DAY"/>
+        <tns:Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
+        <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+        <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+        <tns:Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+
+        <tns:ChristianHoliday type="MAUNDY_THURSDAY"/>
+        <tns:ChristianHoliday type="EASTER" />
+        <tns:ChristianHoliday type="GOOD_FRIDAY" />
+        <tns:ChristianHoliday type="EASTER_MONDAY" />
+        <tns:ChristianHoliday type="ASCENSION_DAY" />
+        <tns:ChristianHoliday type="PENTECOST" />
+
+        <tns:RelativeToEasterSunday descriptionPropertiesKey="ASCENSION_DAY_EVE">
+            <tns:chronology>GREGORIAN</tns:chronology>
+            <tns:days>38</tns:days>
+        </tns:RelativeToEasterSunday>
+
+        <tns:FixedWeekdayBetweenFixed weekday="FRIDAY" descriptionPropertiesKey="MIDSUMMER_EVE">
+            <tns:from month="JUNE" day="19"/>
+            <tns:to month="JUNE" day="25"/>
+        </tns:FixedWeekdayBetweenFixed>
+
+        <tns:FixedWeekdayBetweenFixed weekday="SATURDAY" descriptionPropertiesKey="MIDSUMMER">
+            <tns:from month="JUNE" day="20"/>
+            <tns:to month="JUNE" day="26"/>
+        </tns:FixedWeekdayBetweenFixed>
+
+        <tns:FixedWeekdayBetweenFixed weekday="FRIDAY" descriptionPropertiesKey="ALL_SAINTS_EVE">
+            <tns:from month="OCTOBER" day="30"/>
+            <tns:to month="NOVEMBER" day="5"/>
+        </tns:FixedWeekdayBetweenFixed>
+
+        <tns:FixedWeekdayBetweenFixed weekday="SATURDAY" descriptionPropertiesKey="ALL_SAINTS">
+            <tns:from month="OCTOBER" day="31"/>
+            <tns:to month="NOVEMBER" day="6"/>
+        </tns:FixedWeekdayBetweenFixed>
+
+    </tns:Holidays>
+</tns:Configuration>
