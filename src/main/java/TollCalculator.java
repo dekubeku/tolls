@@ -112,7 +112,6 @@ public class TollCalculator {
   public int getTollFee(final Date date) {
 
     LocalTime time = LocalTime.parse(date.toString().substring(11,16));
-    System.out.println(time.toString());
 
     //Gather all time intervals into groups that have the same fee
     HashMap<LocalTime, LocalTime> group9 = new HashMap<>();
